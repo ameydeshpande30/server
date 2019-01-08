@@ -89,19 +89,25 @@ def sendAPI(request, title, msg):
     return HttpResponse("...Sending Response")
 
 def listn(request):
+    import time
+    t = time.strftime("%D %H:%M", time.localtime(int("1284101485")))
     data1 = {
         'id' : 1,
+        'link' : 'https://homepages.cae.wisc.edu/~ece533/images/tulips.png',
+        'ts' : t,
         'title': 'Test-1',
         'body': 'Want to learn more? I have free mini-courses over on my website. These are 30 minute videos that cover new and interesting topics.',
     }
     data2 = {
         'id': 2,
         'title': 'Test-2',
+        'ts': t,
         'body': 'Want to learn more? I have free mini-courses over on my website. These are 30 minute videos that cover new and interesting topics.',
     }
     data3 = {
         'id': 3,
         'title': 'Test-3',
+        'ts': t,
         'body': 'Want to learn more? I have free mini-courses over on my website. These are 30 minute videos that cover new and interesting topics.',
     }
     data = []
